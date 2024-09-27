@@ -1,4 +1,4 @@
-const url = "https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json"
+const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
@@ -8,7 +8,6 @@ async function vizualizarInformacoesGlobais() {
     const horas = parseInt(dados.tempo_medio)
     const minutos = Math.round((dados.tempo_medio - horas) * 100)
     const porcentagemConectada = ((pessoasConectadas / pessoasNoMundo ) * 100).toFixed(2)
-    
 
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
@@ -19,12 +18,3 @@ async function vizualizarInformacoesGlobais() {
 }
 
 vizualizarInformacoesGlobais()
-async function quantidadeUsuarios() {
-    const url = 'https://raw.githubusercontent.com/guilhermeomrails/api/main/numero_usuarios.json'
-    const res = await fetch(url)
-    const dados = await res.json()
-      
-      console.log(dados)
-  }
-  const nomeDasRedes = Object.keys(dados)
-const quantidadeUsuarios = Object.values(dados)
