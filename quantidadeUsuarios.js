@@ -7,7 +7,35 @@ async function quantidadeUsuariosPorRede() {
     const layout = {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color')
-    }
+        title: {
+            text: 'Redes sociais com mais usuários no mundo'
+            x: 0
+            font: {
+                color: getCSS('--primary-color')
+                family: getCSS('--font')
+                size: 30
+            }
+        }
+        },
+        },
+        tickfont{
+            xaxis: {
+                title: {
+                    text: 'nome das redes sociais',
+                    font: {
+                        color: getCSS('--secondary-color')
+                    }
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'bilhões de usuários ativos',
+                    font: {
+                        color: getCSS('--secondary-color')
+                    }
+                }
+            }
+        }
 
     const data = [
         {
@@ -19,7 +47,7 @@ async function quantidadeUsuariosPorRede() {
         }
     }
     ]
-        
+    {   
 
     const grafico = document.createElement('div')
     grafico.className = "grafico"
@@ -28,3 +56,15 @@ async function quantidadeUsuariosPorRede() {
 }
 import { getCSS } from "./common.js";
 quantidadeUsuariosPorRede()
+import { getCSS, tickConfig } from "./common.js"
+ xaxis: {
+    tickfont: tickConfig,
+    title: {
+        text: 'nome das redes sociais',
+        font: {
+            color: getCSS('--secondary-color')
+        }
+    }
+ }
+
+// código omitido
